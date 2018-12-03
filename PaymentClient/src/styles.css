@@ -1,0 +1,125 @@
+h1 {
+  color: #369;
+  font-family: 'Danske Text', 'Danske Headline', DanskeSerif;
+  font-size: 250%;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button] {
+    width: 100%;
+    background-color: #369;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #b3c6ff;
+}
+
+div {
+    font-family:Danske Human;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#labebl {
+}
+.label:before{
+     content:"*" ;
+     color:red   
+     }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #f2f2f2}
+
+th {
+    background-color: #369;
+    color: white;
+}
+a {
+    line-height: .1em;
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px;
+    margin: 10px;
+    font-family:'Danske Text';
+    font-size:20px;
+}
+.alert {
+    padding: 20px;
+    background-color: #1874CD;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+/* The Modal (background) */
+.modal {    
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

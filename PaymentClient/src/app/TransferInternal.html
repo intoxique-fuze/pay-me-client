@@ -1,0 +1,83 @@
+<div *ngIf ="!Show">
+    <h1>Account List</h1>    
+</div>
+<div>
+    <table border="1">
+        <tr selecttable="blue" style="cursor:pointer">
+            <th>Account</th>
+            <th>Country</th>
+            <th>Currency</th>
+        </tr>
+        <tr *ngFor="let x of accounts" style="cursor:pointer">
+            <td>
+                <div (ondragstart)="drag($event)"  draggable="true" (drop)="Distrue($event)" (ondragover)="prevent($event)" >
+                    {{x.fromAccount}}
+                </div>
+            </td>
+            <td>
+                {{x.country}}
+            </td>
+            <td>
+                {{x.currency}}
+            </td>
+        </tr>    
+    </table>
+</div>
+<div>
+    <table border="1">
+
+        <tr selecttable="blue" style="cursor:pointer">
+            <th> </th>
+            <th> Amount </th>
+            <th> Currency </th>
+            <th> Date </th>
+            <th> Debitor Account Name </th>
+            <th> Creditor Name </th>
+            <th> To Account </th>
+            <th> Reference Number </th>
+            <th> Status </th>
+
+        </tr>
+        <tr *ngFor="let x of paymentresult"  style="cursor:pointer">
+            <td>
+                <input #{{x.referenceNumber}} type="checkbox" [(ngModel)]="x.selected" name="your-group" value="unit-in-group" />
+            </td>
+            <td>
+                {{x.amount}}
+            </td>
+            <td>
+                {{x.currency}}
+            </td>
+            <td>
+                {{x.approvalDate}}
+            </td>
+            <td>
+                {{x.beneficiaryName}}
+            </td>
+            <td>
+                {{x.creditorName}}
+            </td>
+            <td>
+                {{x.toAccount}}
+            </td>
+            <td>
+                {{x.referenceNumber}}
+            </td>            
+            <td>
+                {{x.tBTST}}
+            </td>
+            
+        </tr>
+    </table>    
+</div>
+
+<!-- The Modal -->
+<div *ngIf="dis" id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" (click)="Disfalse()">&times;</span>
+    <label for="type">Enter the amount</label>
+    <input type="text" style="padding-left:2px" name="amountTransfer" value="" #amo/>
+    <input type="button" value="Transfer" (click)="Transfer(amo.value)">
+  </div>
+</div>
